@@ -1,18 +1,14 @@
 package lab5;
-
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Класс, представляющий предприятие, на котором работают работники
  */
 public class Factory {
-
     /**
      * Массив с работниками
      */
     private List<Employee> employees = new ArrayList<>();
-
     /**
      * Добавляет работника на предприятие
      * @param e - объект работника
@@ -20,7 +16,6 @@ public class Factory {
     public void addEmployee(Employee e) {
         employees.add(e);
     }
-
     /**
      * Удаляет работника из предприятия
      * @param e - объект работника
@@ -31,14 +26,13 @@ public class Factory {
         else
             System.out.println("Неудачное удаление. Работник не найден на предприятии");
     }
-
     /**
-     * Выводит всех работников, работающих на предприятии, а также количество работников на окладе и с почасовой оплатой
+     * Выводит всех работников, работающих на предприятии, а также количество
+     работников на окладе и с почасовой оплатой
      */
     public void printEmployees() {
         int оклад = 0;
         int почас = 0;
-
         for (Employee emp: employees) {
             System.out.println(emp);
             if(emp instanceof На_окладе)
